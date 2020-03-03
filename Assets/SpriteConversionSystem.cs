@@ -10,10 +10,7 @@ public class SpriteConversionSystem : GameObjectConversionSystem
     {
         Entities.ForEach((SpriteRenderer renderer) =>
         {
-            var e = GetPrimaryEntity(renderer);
-            DstEntityManager.AddComponent<CopyTransformToGameObject>(e);
             AddHybridComponent(renderer);
-
         });
     }
 }
